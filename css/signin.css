@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+    background-color: black;
+}
+/* image handle login */
+
+.login_image{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* form */
+.form_control{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    color: white;
+}
+label{
+    font-size: 30px;
+}
+.text_form_input{
+    width: 50%;
+   /* line-height: 40px; */
+   height: 40px;
+   font-size: 20px;
+}
+.loginBtn{
+    background-color: rgb(16, 250, 238);
+    font-size: 30px;
+    font-weight: 100;
+    margin: auto;
+    height: 40px;
+    width: 15%;
+    transition: all;
+    outline: none;
+}
+.loginBtn:hover{
+   transition:   1s ease-in-out ;
+   color: white;
+    background-color: rgb(89, 87, 221);
+}
+/* forget password */
+.forget_password{
+    color: white;
+   
+}
+.forget_password p{
+    font-size: 20px;
+  text-align: center;
+}

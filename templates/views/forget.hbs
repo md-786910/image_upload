@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/forget.css">
+        <link rel="shortcut icon" href="../image/logo.jpg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register Account</title>
+    </head>
+    <style>
+        .password{
+            background-color: rgb(46, 112, 235);
+            width: 30%;
+            font-size: 20px;
+            margin: 10px auto;
+      padding: 10px;
+            text-align: center;
+        }
+       #alertmsg{
+            background-color: rgb(43, 77, 230);
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+    </style>
+    <body>
+          <div id="alertmsg">
+            {{status}}
+        </div>
+        <div class="container">
+            <div class="login_image">
+                <img src="../image/login1.png" alt="">
+            </div>
+
+            <form action="/forget" class="form_control" method="POST">
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Enter Email"
+                    class="text_form_input" required>
+                <br>
+                <br>
+
+                <input type="submit" value="Send" class="loginBtn">
+            </form>
+            <br>
+            <!-- forget password -->
+            <div class="forget_password">
+                <p>
+                    Already Account ? <a href="/signin">Sign In</a>
+                </p>
+               <div class="password">
+                   Your Password Is : {{pass}}
+               </div>
+            </div>
+        </div>
+    </body>
+</html>

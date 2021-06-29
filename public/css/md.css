@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+body{
+  background-image: url("../image/mdImage.jpg");
+ 
+}
+.block_div{
+    margin: auto;
+    width: 25%;
+    background-color: rgb(2, 2, 2);
+    height: 40em;
+    border: 1px solid black;
+    box-shadow: 5px 5px 30px rgb(194, 171, 171) ;
+    transform: scale(1.2,1.2);
+}
+.block_div img{
+    display: block;
+    margin: 50px auto;
+    width: 20%;
+    height: 80px;
+    border-radius: 100px;
+}
+/* divider */
+
+.divider{
+    width: 100%;
+    background-color: rgb(121, 114, 114);
+    height: 2px;
+    margin-top: -20px;
+}
+/* all detail */
+
+.all_detail{
+  
+    text-align: center;
+    color: white;
+}
+
+/* button */
+
+button{
+    margin-top: 50px;
+    width: 100%;
+    color: black;
+    font-weight: 800;
+}

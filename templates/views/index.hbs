@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/home.css">
+        <link rel="shortcut icon" href="./image/music.jpg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+    </head>
+     <style>
+        #alertmsg{
+            background-color: rgb(43, 77, 230);
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+        #alertmsg1{
+            background-color: rgb(43, 77, 230);
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+    </style>
+    <body>
+          <div id="alertmsg">
+            {{msg}}
+        </div>
+          <div id="alertmsg1">
+            {{box}}
+        </div>
+       {{>navbar}}
+        <!-- serach image para -->
+        <div class="para_search_image">
+            <!-- <p id="para_tag">
+                Search Your Image
+            </p> -->
+            <!-- i am applying image of  -->
+
+            <div id="home_image">
+                <img id="para_image" src="../image/home.png" alt="">
+            </div>
+        </div>
+        <!-- input tag -->
+        <form action="/" class="form_control">
+            <input type="text" name="Query" id="inputField"
+                placeholder="serach your image here.">
+            <input type="submit" value="Search Here" id="submitBtn" onchange="change()">
+        </form>
+
+        <!-- your iamge paraa -->
+
+        <div class="paraimage">
+            <p id="your_image">
+                Your Image
+            </p>
+        </div>
+        <div class="divider divider_your_image">
+
+        </div>
+
+        <!-- image here -->
+        <div  class="image">
+          {{#each src}}
+            <img class="img_items" src=/upload/{{this.file}} alt="image" value={{this.id}} title={{this.file}}
+            onclick="deleteOne({{{"kkj"}}})"   >
+                      {{/each}}
+        </div>
+        <!-- comments -->
+        <div class="comments">
+            <div class="para_coments same_class">
+                <p id="ptag_com">
+                    Comments
+                </p>
+            </div>
+        <form action="/" method="POST">
+            <div class="comment_box same_class">
+                <input type="text" name="commentval" id="commentBox" placeholder="Write Comment Here.">
+                {{!-- <textarea name="" id="commentBox" cols="30" rows="10"
+                    placeholder="Write Comment Here ." name="commentval"></textarea> --}}
+            </div>
+            <div class="btnSend same_class">
+                {{!-- <button>Send</button> --}}
+                <input type="submit" value="Send" id="submitComment">
+            </div>
+        </form>
+        </div>
+        <!-- rating part -->
+        <div class="rating">
+            <p id="ratingpara">
+                Rating
+            </p>
+        </div>
+        <!-- add two imahe here -->
+        <div class="rating_image">
+            <div class="div_rating_image">
+                <img class="rating_image_class" src="../image/rating.png"
+                    alt="">
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="heading">
+                <h2 class="heading_items">
+                    setting
+                </h2>
+                <h2 class="heading_items heading_item1">Join WIth Us</h2>
+            </div>
+
+            <!-- add image to join -->
+
+            <div class="image_join_me">
+                <img class="login img_join_child" src="../image/face.png"
+                    class="join_t0_me"
+                    alt="">
+                <img class="github img_join_child" src="../image/github.png"
+                    alt="">
+                <img class="github img_join_child" src="../image/google.png"
+                    alt="">
+                <img class="github img_join_child" src="../image/youtube.png"
+                    alt="">
+            </div>
+
+            <!-- all right reserded -->
+            <section id="copyright">
+                <p>
+                    Copyright @ 2021.
+                </p>
+                <p>
+                    All Right Reserved.
+                </p>
+            </section id="copyright">
+        </footer>
+           {{!-- <div class="gcse-search" enableAutoComplete="true"></div>  --}}
+    </body>
+    <script src="./js/index.js"></script>
+    <script>
+        
+    </script>
+     {{!-- <script async src="https://cse.google.com/cse.js?cx=db7374753e37eb0d2"></script> --}}
+</html>

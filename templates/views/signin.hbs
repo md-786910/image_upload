@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/signin.css">
+        <link rel="shortcut icon" href="../image/logo.jpg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register Account</title>
+    </head>
+    <style>
+     #alertmsg{
+            background-color: rgb(43, 77, 230);
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+    </style>
+    <body>
+         <div id="alertmsg">
+            {{msg}}
+        </div>
+        <div class="container">
+            <div class="login_image">
+                <img src="../image/login1.png" alt="">
+            </div>
+
+            <form action="/signin" class="form_control" method="POST">
+
+                <label>Email</label>
+                <input type="text" name="email" placeholder="Enter Email"
+                    class="text_form_input" required>
+
+                <br>
+                <br>
+                <label>Password</label>
+                <input type="text"  placeholder="Enter Password"
+                    class="text_form_input" name="password" required>
+                <br>
+                <br>
+
+                <input type="submit" value="Login" class="loginBtn">
+            </form>
+            <br>
+            <!-- forget password -->
+            <div class="forget_password">
+                <p>
+                    Forger Password ? <a href="/forget">Forger Password</a>
+                </p>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

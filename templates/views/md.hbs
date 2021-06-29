@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../css/md.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Users Details</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="block_div">
+                <img src="../image/usericon.png">
+                <!-- divider -->
+                <div class="divider">
+
+                </div>
+                <div class="all_detail">
+                    <p>
+                        Name : <b>{{user.name}}</b>
+                    </p>
+                    <p>
+                        Email : <b>{{user.email}}</b>
+                    </p>
+                    <p>
+                        Password : <b>{{user.password}}</b>
+                    </p>
+                </div>
+
+                <!-- back to home -->
+                <button>
+                    <a href="/">Back To Home</a>
+                </button>
+                <br>
+                <button>
+                    <a href="/signin">Logout</a>
+                </button>
+                <br>
+                <button>
+                    <a href="https://vibrant-carson-e1e085.netlify.app/"
+                        target="_blank">chat
+                        app</a>
+                </button>
+            </div>
+
+
+        </div>
+    </body>
+</html>
