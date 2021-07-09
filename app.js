@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 const mongodb = require("mongodb").MongoClient
 const server = http.createServer(app)
 app.use(express.urlencoded())
-const port = 3001 || env.process.PORT;
+const port = 3000 || env.process.PORT;
 
 // add req with express
 app.use(express.json())
@@ -22,12 +22,12 @@ app.use(bodyParser());
 // connect to mongodb database
 //mongodb+srv://db:6O3rHBpJYYLnGjbV@database.l2fnk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // ', { useNewUrlParser: true, useUnifiedTopology: true });
-
+//mongoose.connect('mongodb://localhost:27017/image2
 
 const mongoCon = async () => {
     try {
 
-        await mongoose.connect("mongoose.connect('mongodb://localhost:27017/image2",
+        await mongoose.connect("mongodb+srv://db:6O3rHBpJYYLnGjbV@database.l2fnk.mongodb.net/imageUpload?retryWrites=true&w=majority",
 
             {
                 keepAlive: true,
