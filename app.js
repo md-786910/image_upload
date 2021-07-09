@@ -8,9 +8,8 @@ const hbs = require("hbs");
 const bodyParser = require("body-parser");
 const mongodb = require("mongodb").MongoClient
 const server = http.createServer(app)
-const dotenv = require("dotenv").config();
 app.use(express.urlencoded())
-const port = 3000 || env.process.PORT;
+const port = 3001 || env.process.PORT;
 
 // add req with express
 app.use(express.json())
@@ -21,12 +20,14 @@ app.use(bodyParser());
 // add mongoose header
 
 // connect to mongodb database
+//mongodb+srv://db:6O3rHBpJYYLnGjbV@database.l2fnk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+// ', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// mongoose.connect('mongodb://localhost:27017/image2', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const mongoCon = async () => {
     try {
-        await mongoose.connect("mongodb+srv://db:6O3rHBpJYYLnGjbV@database.l2fnk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+
+        await mongoose.connect("mongoose.connect('mongodb://localhost:27017/image2",
 
             {
                 keepAlive: true,
@@ -85,7 +86,6 @@ app.set("view engine", "hbs");
 app.set("views", templateviews)
 
 // set partials 
-
 hbs.registerPartials(templatepartial);
 
 // uplaod image 
@@ -99,9 +99,11 @@ let storage = multer.diskStorage({
     }
 })
 
+// multer middleware
 let uploads = multer({
     storage: storage,
 }).single("file")
+
 
 // get method
 app.get("/", async (req, res) => {
@@ -358,6 +360,24 @@ app.post("/forget", async (req, res) => {
 
 })
 
+
+// delete image from database
+app.post("/delete", async (req, res) => {
+    try {
+        const deleteId = req.body.delete;
+        let deleteData = await image1.findByIdAndDelete(deleteId);
+        let getdata = await image1.find();
+        console.log(deleteData)
+        res.status(200).render("index", {
+            src: getdata
+        });
+    } catch (error) {
+        console.log(error)
+    }
+
+
+
+})
 
 // app listen on port
 server.listen((port), () => {

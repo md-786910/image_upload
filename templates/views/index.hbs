@@ -76,9 +76,14 @@
         <!-- image here -->
         <div  class="image">
           {{#each src}}
-            <img class="img_items" src=/upload/{{this.file}} alt="image" value={{this.id}} title={{this.file}}
-            onclick="deleteOne({{{"kkj"}}})"   >
+            <img class="img_items" src=/upload/{{this.file}} alt="image"  title="{{this.file}}" name="{{this.file}}"
+            value="{{this.file}}" onclick="downloaded('{{this.file}}')">
+
+            <form action="/delete" method="POST" class="formDelete">
+            <button name="delete" value="{{this.id}}" onclick="this.form.submit" class="btnforDelete"><img src="./image/cross.png" id="deleteImage" alt=""></button>
+            </form>
                       {{/each}}
+
         </div>
         <!-- comments -->
         <div class="comments">
@@ -90,8 +95,7 @@
         <form action="/" method="POST">
             <div class="comment_box same_class">
                 <input type="text" name="commentval" id="commentBox" placeholder="Write Comment Here.">
-                {{!-- <textarea name="" id="commentBox" cols="30" rows="10"
-                    placeholder="Write Comment Here ." name="commentval"></textarea> --}}
+             
             </div>
             <div class="btnSend same_class">
                 {{!-- <button>Send</button> --}}
@@ -149,8 +153,6 @@
            {{!-- <div class="gcse-search" enableAutoComplete="true"></div>  --}}
     </body>
     <script src="./js/index.js"></script>
-    <script>
-        
-    </script>
      {{!-- <script async src="https://cse.google.com/cse.js?cx=db7374753e37eb0d2"></script> --}}
 </html>
+

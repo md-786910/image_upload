@@ -22,9 +22,7 @@ setTimeout(() => {
     alertmsg1.style.opacity = 0;
 }, 3000)
 
-// delete image by dbl click
-
-const deleteOne = (val) => {
-    console.log(JSON.stringify(val))
-    alert("")
+// download image by  click
+function downloaded(down) {
+    down.save
 }

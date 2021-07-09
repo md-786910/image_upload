@@ -161,11 +161,18 @@ margin-top: 10px;
     transition: all;
     transition-duration: 1.4s;
 }
-
 .img_items:hover{
     transform:scale(1.1,1.1);
 }
+#deleteImage{
 
+    height:30px;
+}
+.btnforDelete{
+    position: relative;
+    right:3em;
+    top: 2em;
+}
 /* commets */
 .comments{
     
